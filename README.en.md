@@ -66,7 +66,7 @@ icon, and in the drop-down window, follow the link `Details`.
 
 ![Deployment status](./assets/deploy-status.png)
 
-### Live page
+ ### Live page
 
 After some time, usually a couple of minutes, the live page can be viewed at the
 address specified in the edited `homepage` property. For example, here is a link
