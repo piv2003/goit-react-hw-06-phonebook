@@ -1,7 +1,8 @@
+import { Formik, ErrorMessage } from 'formik';
+import { object, string } from 'yup';
 import PropTypes from 'prop-types';
-import { Component } from 'react';
 import { FormBox, InputName, InputTel, Button } from './Form.styled';
 
-Form.propTypes = {
+ContactForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
