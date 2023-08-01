@@ -1,6 +1,6 @@
 # React homework template
 
-Acest proiect a fost creat cu ajutorul
+Acest proiect a fost creat cu ajutorul  
 [Create React App](https://github.com/facebook/create-react-app). Pentru prezentări
 și configurarea de funcții suplimentare
 [consultați documentația](https://facebook.github.io/create-react-app/docs/getting-started).
