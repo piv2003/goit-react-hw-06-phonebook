@@ -17,6 +17,12 @@ export default function App() {
      
       function checkСontact(newNumber) {
     return contacts.some(contact => contact.number === newNumber);
+     }
+     
+     function onSubmit(name, number) {
+    checkСontact(number)
+      ? notifiesAlert(number)
+      : dispatch(addContact(name, number));
   }
 
   return <AppBox></AppBox>;
