@@ -1,4 +1,6 @@
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { onChangeFilter } from '../../redux/filterSlice';
+import { getFilter } from '../../redux/selectors';
 import { LabelFilter, InputFilter } from './Filter.styled';
 
 const Filter = ({ onChange, filter }) => {
