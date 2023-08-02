@@ -18,7 +18,7 @@ const Filter = () => {
         type="text"
         name="filter"
         value={filter}
-        onChange={onChange}
+        onChange={handleInputChange}
       />
     </LabelFilter>
   );
