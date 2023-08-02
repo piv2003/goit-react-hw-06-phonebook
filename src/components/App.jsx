@@ -12,5 +12,12 @@ export default function App() {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
+   function notifiesAlert(numberContact) {
+     return toast.error(`${numberContact} is already in contacts.`);
+     
+      function checkСontact(newNumber) {
+    return contacts.some(contact => contact.number === newNumber);
+  }
+
   return <AppBox></AppBox>;
 }
