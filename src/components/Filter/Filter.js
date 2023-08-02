@@ -3,7 +3,14 @@ import { onChangeFilter } from '../../redux/filterSlice';
 import { getFilter } from '../../redux/selectors';
 import { LabelFilter, InputFilter } from './Filter.styled';
 
-const Filter = ({ onChange, filter }) => {
+const Filter = () => {
+  const dispatch = useDispatch();
+  const filter = useSelector(getFilter);
+
+  function handleInputChange(evt) {
+    dispatch(onChangeFilter(evt.target.value));
+  }
+
   return (
     <LabelFilter>
       <span>Find contacts by name</span>
