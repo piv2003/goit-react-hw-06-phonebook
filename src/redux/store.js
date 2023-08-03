@@ -10,3 +10,5 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+
+export const persistor = persistStore(store);
