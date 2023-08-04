@@ -23,7 +23,10 @@ const userSchema = object({
     .required(),
 });
 export default function ContactForm({ onSubmit }) {
-  function handleSubmit({ name, number }, { resetForm }) {}
+  function handleSubmit({ name, number }, { resetForm }) {
+    onSubmit(name, number);
+    resetForm();
+  }
   return (
     <Formik
       initialValues={initialValues}
@@ -33,9 +36,13 @@ export default function ContactForm({ onSubmit }) {
       <FormBox autoComplete="off">
         <label>
           <span>Name</span>
+          <InputName type="text" name="name" />
+          <ErrorMessage name="name" />
         </label>
         <label>
           <span>Tel</span>
+          <InputTel type="tel" name="number" />
+          <ErrorMessage name="number" />
         </label>
         <Button type="submit">Add contact</Button>
       </FormBox>
