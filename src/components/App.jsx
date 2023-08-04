@@ -16,14 +16,20 @@ export default function App() {
     return toast.error(`${numberContact} is already in contacts.`);
   }
 
-  function checkСontact(newNumber) {
+  function checkContact(newNumber) {
     return contacts.some(contact => contact.number === newNumber);
   }
 
   function onSubmit(name, number) {
-    checkСontact(number)
-      ? notifiesAlert(number)
-      : dispatch(addContact(name, number));
+    try {
+      if (checkContact(number)) {
+        notifiesAlert(number);
+      } else {
+        dispatch(addContact(name, number));
+      }
+    } catch (error) {
+      console.error('Error occurred:', error.message);
+    }
   }
 
   return (
