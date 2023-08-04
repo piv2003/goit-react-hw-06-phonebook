@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const FormBox = styled.form`
   margin-left: auto;
@@ -36,6 +36,18 @@ export const InputTel = styled(InputName)`
   font-style: normal;
 `;
 
+const clickEffect = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 export const Button = styled.button`
   color: #ee66d0;
   padding: 5px;
@@ -54,4 +66,17 @@ export const Button = styled.button`
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 10px, rgba(0, 0, 0, 0.12) 0px -3px 5px,
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 3px 5px,
     rgba(0, 0, 0, 0.09) 0px -3px 2px;
+  background: radial-gradient(circle, #f1c1bc, #d3e680);
+  background-clip: padding-box;
+  transition: background-image 0.3s, color 0.3s, transform 0.3s;
+
+  &:hover {
+    background: radial-gradient(circle, #d3e680, #f1c1bc);
+    color: darkblue;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    animation: ${clickEffect} 1.2s;
+  }
 `;

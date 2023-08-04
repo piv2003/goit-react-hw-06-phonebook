@@ -66,7 +66,7 @@ export const Empty = styled.p`
   }
   @keyframes pulsate {
     50% {
-      color: #fff;
+      color: #d60bf1;
       text-shadow: 0 -1px rgba(0, 0, 0, 0.3), 0 0 5px #ffd, 0 0 8px #fff;
     }
   }
