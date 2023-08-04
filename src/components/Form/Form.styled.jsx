@@ -62,8 +62,4 @@ export const Button = styled.button`
     color: darkblue;
     transform: scale(1.1);
   }
-
-  &:active {
-    animation: clickEffect 1.2s radial;
-  }
 `;
