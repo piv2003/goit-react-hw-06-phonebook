@@ -4,7 +4,7 @@ export const FormBox = styled.form`
   margin-left: auto;
   margin-right: auto;
   padding: 15px;
-  background: white;
+  background: #f8f7ee;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 75px 75px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -25,7 +25,7 @@ export const InputName = styled.input`
   margin-bottom: 10px;
   background: #e9eff6;
   line-height: 40px;
-  border-width: 0;
+  border-width: 0px;
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -66,12 +66,12 @@ export const Button = styled.button`
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 10px, rgba(0, 0, 0, 0.12) 0px -3px 5px,
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 3px 5px,
     rgba(0, 0, 0, 0.09) 0px -3px 2px;
-  background: radial-gradient(circle, #f1c1bc, #d3e680);
+  background: radial-gradient(circle, #f8ebea, #d3e680);
   background-clip: padding-box;
   transition: background-image 0.3s, color 0.3s, transform 0.3s;
 
   &:hover {
-    background: radial-gradient(circle, #d3e680, #f1c1bc);
+    background: radial-gradient(circle, #e403c6, #f1c1bc);
     color: darkblue;
     transform: scale(1.1);
   }
