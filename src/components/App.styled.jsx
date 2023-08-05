@@ -11,6 +11,9 @@ export const AppBox = styled.div`
   gap: 20px;
   border-radius: 50px;
   padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.986).45) 5px 7px 10px, rgba(0, 0, 0, 0.12) 3px -3px 10px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 3px 5px,
+    rgba(0, 0, 0, 0.09) 0px -3px 2px;
   background: repeating-linear-gradient(
       190deg,
       rgba(247, 56, 56, 0.5) 40px,

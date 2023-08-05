@@ -6,8 +6,11 @@ export const FormBox = styled(Form)`
   margin-right: auto;
   padding: 20px;
   width: 260px;
-  background: white;
+  background: #fff;
   border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.986).45) 5px 7px 10px, rgba(0, 0, 0, 0.9) 3px -3px 10px,
+    rgba(0, 0, 0, 0.9) 0px 4px 6px, rgba(0, 0, 0, 0.9) 10px 3px 5px,
+    rgba(0, 0, 0, 0.9) 10px -3px 2px;
 
   & label {
     display: flex;
