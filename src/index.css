@@ -7,6 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background-image: url('/img/starry_sky.jpg');
+  background-size: 300% 300%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 img {
