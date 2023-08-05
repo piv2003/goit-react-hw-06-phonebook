@@ -1,5 +1,5 @@
 import { Form, Field } from 'formik';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const FormBox = styled(Form)`
   margin-left: auto;
@@ -22,8 +22,7 @@ export const FormBox = styled(Form)`
   }
 `;
 
-export const InputName = styled.input`
-  display: block;
+export const InputName = styled(Field)`
   padding: 0 20px;
   margin-bottom: 10px;
   background: #e9eff6;
@@ -31,14 +30,21 @@ export const InputName = styled.input`
   border-width: 0;
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
-  font-style: normal;
   font-size: 18px;
-  color: red;
 `;
 
-export const InputTel = styled(InputName)`
-  font-style: normal;
-  color: red;
+export const InputTel = styled(InputName)``;
+
+const clickEffect = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 `;
 
 export const Button = styled.button`
@@ -67,5 +73,9 @@ export const Button = styled.button`
     background: radial-gradient(circle, #d3e680, #f1c1bc);
     color: darkblue;
     transform: scale(1.1);
+  }
+
+  &:active {
+    animation: ${clickEffect} 1.2s;
   }
 `;
