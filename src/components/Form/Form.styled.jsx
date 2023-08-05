@@ -6,7 +6,6 @@ export const FormBox = styled(Form)`
   margin-right: auto;
   padding: 20px;
   width: 260px;
-
   background: white;
   border-radius: 30px;
 
@@ -16,12 +15,15 @@ export const FormBox = styled(Form)`
     width: 100%;
 
     & span {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #8005c7;
     }
   }
 `;
 
-export const InputName = styled(Field)`
+export const InputName = styled.input`
+  display: block;
   padding: 0 20px;
   margin-bottom: 10px;
   background: #e9eff6;
@@ -29,11 +31,15 @@ export const InputName = styled(Field)`
   border-width: 0;
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
-  font-style: italic;
+  font-style: normal;
   font-size: 18px;
+  color: red;
 `;
 
-export const InputTel = styled(InputName)``;
+export const InputTel = styled(InputName)`
+  font-style: normal;
+  color: red;
+`;
 
 export const Button = styled.button`
   color: #ee66d0;
