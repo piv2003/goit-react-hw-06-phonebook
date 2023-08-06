@@ -2,6 +2,9 @@ import { Formik, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import PropTypes from 'prop-types';
 import { FormBox, InputName, InputTel, Button } from './Form.styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { addContact, getContacts } from '../../redux/contactsSlice';
+import { toast } from 'react-toastify';
 
 const initialValues = {
   name: '',
@@ -22,11 +25,24 @@ const userSchema = object({
     )
     .required(),
 });
+
 export default function ContactForm({ onSubmit }) {
+  const contacts = useSelector(getContacts);
+  const dispatch = useDispatch();
+
   function handleSubmit({ name, number }, { resetForm }) {
-    onSubmit(name, number);
+    try {
+      if (contacts.some(contact => contact.number === number)) {
+        toast.error(`${number} is already in contacts.`);
+      } else {
+        dispatch(addContact(name, number));
+      }
+    } catch (error) {
+      console.error('Error occurred:', error.message);
+    }
     resetForm();
   }
+
   return (
     <Formik
       initialValues={initialValues}
