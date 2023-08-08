@@ -26,7 +26,7 @@ const userSchema = object({
     .required(),
 });
 
-export default function ContactForm({ onSubmit }) {
+export default function ContactForm() {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
