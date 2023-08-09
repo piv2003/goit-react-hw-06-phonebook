@@ -34,6 +34,8 @@ export default function ContactForm() {
     try {
       if (contacts.some(contact => contact.number === number)) {
         toast.error(`${number} is already in contacts.`);
+      } else if (contacts.some(contact => contact.name === name)) {
+        toast.error(`${name} is already in contacts.`);
       } else {
         dispatch(addContact(name, number));
       }
